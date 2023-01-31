@@ -1,28 +1,28 @@
 # İçindekiler 
 
-* [Başlarken](https://github.com/Mona-Roza/avr_101#başlarken)
+* [Başlarken](#başlarken)
 
-* [Kurulum](https://github.com/Mona-Roza/avr_101#kurulum)
+* [Kurulum](#kurulum)
 
-    * [MacOS X Kurulum](https://github.com/Mona-Roza/avr_101#macos-x-kurulum)
+    * [MacOS X Kurulum](#macos-x-kurulum)
 
-    * [Windows Kurulum](https://github.com/Mona-Roza/avr_101#windows-kurulum)
+    * [Windows Kurulum](#windows-kurulum)
 
-* [C ile AVR Programlama](https://github.com/Mona-Roza/avr_101#c-ile-avr-programlama)
+* [C ile AVR Programlama](#c-ile-avr-programlama)
 
-    * [Register](https://github.com/Mona-Roza/avr_101#register)
+    * [Register](#register)
 	
-    * [Port Registerleri](https://github.com/Mona-Roza/avr_101#port-registerleri)
+    * [Port Registerleri](#port-registerleri)
 
-        * [MCUCR (MCU Control Register)](https://github.com/Mona-Roza/avr_101#mcucr-mcu-control-register)
+        * [MCUCR (MCU Control Register)](#mcucr-mcu-control-register)
 
-            * [PUD (Pull Up Disable)](https://github.com/Mona-Roza/avr_101#pud-pull-up-disable)
+            * [PUD (Pull Up Disable)](#pud-pull-up-disable)
 
-        * [DDRx (The Port x Data Direction Register)](https://github.com/Mona-Roza/avr_101#ddrx-the-port-x-data-direction-register)
+        * [DDRx (The Port x Data Direction Register)](#ddrx-the-port-x-data-direction-register)
 
-        * [PORTx (The Port x Data Register)](https://github.com/Mona-Roza/avr_101#portx-the-port-x-data-register)
+        * [PORTx (The Port x Data Register)](#portx-the-port-x-data-register)
 
-        * [PINx (The Port x Input Pins Address)](https://github.com/Mona-Roza/avr_101#pinx-the-port-x-input-pins-address)
+        * [PINx (The Port x Input Pins Address)](#pinx-the-port-x-input-pins-address)
 
 # Başlarken
 Bu bölümde C programlama dili ile AVR mikrokontrolcü programlama hakkındaki notlarım bulunmaktadır. Burada prototipleme için ATmega328p çipine sahip Arduino UNO veya ATmega328pb çipine sahip Arduino Nano kullanılmıştır.
@@ -92,7 +92,7 @@ Aşağıdaki komutlar ile indirdiğimiz araçların doğru şekilde kurulup kuru
 
 > Terminal çıktınız yaklaşık bu şekilde olmalıdır:
 
-[![](https://github.com/Mona-Roza/avr_101/images/Ekran%20Resmi%202022-12-08%2000.28.14.png)](https://github.com/Mona-Roza/avr_101/images/Ekran%20Resmi%202022-12-08%2000.28.14.png)
+[![](/images/Ekran%20Resmi%202022-12-08%2000.28.14.png)](/images/Ekran%20Resmi%202022-12-08%2000.28.14.png)
 
 ### Port numarasının bulunması:
 Derlenen kodların, avrdude aracılığıyla mikrokontrolcüye doğru bir şekilde iletilebilmesi için öncelikle kartımızı bağladığımız usb portunu öğrenmemiz gerekiyor. Bunu yapabilmek için Arduino IDE'yi **[indirip](https://www.arduino.cc/en/software)** kurmanız gerekiyor. Arduino ideyi kurduktan sonra, aşağıdaki adımları takip edin:
@@ -105,23 +105,23 @@ Derlenen kodların, avrdude aracılığıyla mikrokontrolcüye doğru bir şekil
 
 3. Arduino'yu bağladığınız portu ide üzerinden seçin.
 
-[![](https://github.com/Mona-Roza/avr_101/images/Ekran%20Resmi%202022-12-08%2001.41.42.png)](https://github.com/Mona-Roza/avr_101/images/Ekran%20Resmi%202022-12-08%2001.41.42.png)
+[![](/images/Ekran%20Resmi%202022-12-08%2001.41.42.png)](/images/Ekran%20Resmi%202022-12-08%2001.41.42.png)
 
 4. Ardunio IDE'nin tercihler menüsünü açın.
 
-[![](https://github.com/Mona-Roza/avr_101/images/Ekran%20Resmi%202022-12-08%2001.45.13.png)](https://github.com/Mona-Roza/avr_101/images/Ekran%20Resmi%202022-12-08%2001.45.13.png)
+[![](/images/Ekran%20Resmi%202022-12-08%2001.45.13.png)](/images/Ekran%20Resmi%202022-12-08%2001.45.13.png)
 
 5. Tercihler menüsünde "Yükleme sırasında ayrıntılı çıktı göster" seçeneğini aktif edin ve tercihler menüsünü kaydederek kapatın.
 
-[![](https://github.com/Mona-Roza/avr_101/images/Ekran%20Resmi%202022-12-08%2001.48.08.png)](https://github.com/Mona-Roza/avr_101/images/Ekran%20Resmi%202022-12-08%2001.48.08.png)
+[![](/images/Ekran%20Resmi%202022-12-08%2001.48.08.png)](/images/Ekran%20Resmi%202022-12-08%2001.48.08.png)
 
 6. Kodu derleyin ve kartınıza yükleyin.
 
-[![](https://github.com/Mona-Roza/avr_101/images/Ekran%20Resmi%202022-12-08%2001.53.12.png)](https://github.com/Mona-Roza/avr_101/images/Ekran%20Resmi%202022-12-08%2001.53.12.png)
+[![](/images/Ekran%20Resmi%202022-12-08%2001.53.12.png)](/images/Ekran%20Resmi%202022-12-08%2001.53.12.png)
 
 7. Ardından output kısmını genişletin ve çıktının en üzerinde belirtilen yerdeki port adınızı kopyalayıp not defterinize kaydedin.
 
-[![](https://github.com/Mona-Roza/avr_101/images/Ekran%20Resmi%202022-12-08%2001.57.25.png)](https://github.com/Mona-Roza/avr_101/images/Ekran%20Resmi%202022-12-08%2001.57.25.png)
+[![](/images/Ekran%20Resmi%202022-12-08%2001.57.25.png)](/images/Ekran%20Resmi%202022-12-08%2001.57.25.png)
 
 8. Artık Arduino IDE'yi kapatabilirsiniz.
 
@@ -175,7 +175,7 @@ Sırasıyla aşağıdaki işlemler takip edilmelidir.
 
 1. Öncelikle bilgisayarınıza uygun **[git kurulum dosyasını](https://git-scm.com/download/win)** indirin.
 
-[![](https://github.com/Mona-Roza/avr_101/images/git_indir.png)](https://github.com/Mona-Roza/avr_101/images/git_indir.png)
+[![](/images/git_indir.png)](/images/git_indir.png)
 
 2. Dosyayı indirdiğiniz konuma gidin ve dosyayı başlatın.
 
@@ -183,17 +183,17 @@ Sırasıyla aşağıdaki işlemler takip edilmelidir.
 
 4. Install'a basarak devam edin.
 
-[![](https://github.com/Mona-Roza/Notes/blob/main/embedded_systems/images/bilgilendirme.png)](https://github.com/Mona-Roza/avr_101/images/bilgilendirme.png)
+[![](https://github.com/Mona-Roza/Notes/blob/main/embedded_systems/images/bilgilendirme.png)](/images/bilgilendirme.png)
 
 5. Kurulumun bitmesini bekleyin.
 
-[![](https://github.com/Mona-Roza/avr_101/images/yukleme.png)](https://github.com/Mona-Roza/avr_101/images/yukleme.png)
+[![](/images/yukleme.png)](/images/yukleme.png)
 
 6. Finish'e basarak kurulumu tamamlayın.
 
-[![](https://github.com/Mona-Roza/avr_101/images/bitir.png)](https://github.com/Mona-Roza/avr_101/images/bitir.png)
+[![](/images/bitir.png)](/images/bitir.png)
 
-7. Git'i **[Ortam Değişkenlerine ekleyin.](https://github.com/Mona-Roza/avr_101#ortam-değişkenlerine-ekleme)**
+7. Git'i **[Ortam Değişkenlerine ekleyin.](#ortam-değişkenlerine-ekleme)**
 
 #### avr-gcc'nin Kurulumu:
 
@@ -201,31 +201,31 @@ Sırasıyla aşağıdaki işlemler takip edilmelidir.
 
 2. Zip dosyasını kaydedeceğiniz konuma ayıklayın.
 
-[![](https://github.com/Mona-Roza/avr_101/images/avr_zip_ayikla.png)](https://github.com/Mona-Roza/avr_101/images/avr_zip_ayikla.png)
+[![](/images/avr_zip_ayikla.png)](/images/avr_zip_ayikla.png)
 
-3. avr-gcc'yi **[Ortam Değişkenlerine ekleyin.](https://github.com/Mona-Roza/avr_101/#ortam-değişkenlerine-ekleme)**
+3. avr-gcc'yi **[Ortam Değişkenlerine ekleyin.](/#ortam-değişkenlerine-ekleme)**
 
 ### Ortam Değişkenlerine Ekleme:
 
 1. Windows Arama Menüsü'ne Ortam Değişkenleri yazarak "Sistem Ortam Değişkenlerini Düzenleyin" seçeneğine tıklayın.
 
-[![](https://github.com/Mona-Roza/avr_101/images/ortam_degiskenleri_arama.png)](https://github.com/Mona-Roza/avr_101/images/ortam_degiskenleri_arama.png)
+[![](/images/ortam_degiskenleri_arama.png)](/images/ortam_degiskenleri_arama.png)
 
 2. Sistem Özellikleri Menüsünde bulunan "Ortam Değişkenleri..." butonuna tıklayın.
 
-[![](https://github.com/Mona-Roza/avr_101/images/sistem_ozellikleri.png)](https://github.com/Mona-Roza/avr_101/images/sistem_ozellikleri.png)
+[![](/images/sistem_ozellikleri.png)](/images/sistem_ozellikleri.png)
 
 3. Ortam Değişkenleri menüsünün kullanıcı değişkenleri kısmından "Path"i seçerek "Düzenle..." butonuna tıklayın.
 
-[![](https://github.com/Mona-Roza/avr_101/images/ortam_degiskenleri.png)](https://github.com/Mona-Roza/avr_101/images/ortam_degiskenleri.png)
+[![](/images/ortam_degiskenleri.png)](/images/ortam_degiskenleri.png)
 
 4. Öncelikle "Yeni" butonuna tıklayarak yeni bir satır oluşturun, ardından ortam değişkenlerine eklemek istediğiniz programın "bin" klasörünün yolunu kopyalayıp bu satıra yapıştırın ve "Tamam" butonuna basarak yaptıklarınızı kaydedin.
 
-[![](https://github.com/Mona-Roza/avr_101/images/ortam_desikenlerini_duzenle.png)](https://github.com/Mona-Roza/avr_101/images/ortam_desikenlerini_duzenle.png)
+[![](/images/ortam_desikenlerini_duzenle.png)](/images/ortam_desikenlerini_duzenle.png)
 
 5. Tekrar "Tamam" butonlarına basarak Ortam Değişkenleri ve Sistem Özellikleri menülerini kapatın.
 
-| [![](https://github.com/Mona-Roza/avr_101/images/ortam_degiskenini_kaydet.png)](https://github.com/Mona-Roza/avr_101/images/ortam_degiskenini_kaydet.png) | [![](https://github.com/Mona-Roza/avr_101/images/sistem_ozellikleri_kaydet.png)](https://github.com/Mona-Roza/avr_101/images/sistem_ozellikleri_kaydet.png) |
+| [![](/images/ortam_degiskenini_kaydet.png)](/images/ortam_degiskenini_kaydet.png) | [![](/images/sistem_ozellikleri_kaydet.png)](/images/sistem_ozellikleri_kaydet.png) |
 |---|---|
 
 ### Kontrol:
@@ -240,7 +240,7 @@ avrdude
 ```
 komutlarını çalıştırın. Terminal çıktınız aşağıdaki gibi gözükmelidir:
 
-[![](https://github.com/Mona-Roza/avr_101/images/teminal.png)](https://github.com/Mona-Roza/avr_101/images/teminal.png)
+[![](/images/teminal.png)](/images/teminal.png)
 
 ### Port numarasının bulunması:
 Derlenen kodların, avrdude aracılığıyla mikrokontrolcüye doğru bir şekilde iletilebilmesi için öncelikle kartımızı bağladığımız usb portunu öğrenmemiz gerekiyor. Bunu yapabilmek için Arduino IDE'yi **[indirip](https://www.arduino.cc/en/software)** kurmanız gerekiyor. Ardunio ideyi kurduktan sonra, aşağıdaki adımları takip edin:
@@ -251,7 +251,7 @@ Derlenen kodların, avrdude aracılığıyla mikrokontrolcüye doğru bir şekil
 
 3. Arduino IDE üzerinden "Tools" menüsünü açın ardından "Port" seçeneğinin üzerine gelin ve açılan yerden port adınızı not defterinize kaydedin.
 
-[![](https://github.com/Mona-Roza/avr_101/images/port.png)](https://github.com/Mona-Roza/avr_101/images/port.png)
+[![](/images/port.png)](/images/port.png)
 
 4. Artık Arduino IDE'yi kapatabilirsiniz.
 
@@ -302,7 +302,7 @@ int main (void)
 
 Arduino UNO Pinout Diyagramı:
 
-[![](https://github.com/Mona-Roza/avr_101/images/aduino_pinout.jpeg)](https://forum.arduino.cc/t/arduino-uno-pinout-diagram/142856)
+[![](/images/aduino_pinout.jpeg)](https://forum.arduino.cc/t/arduino-uno-pinout-diagram/142856)
 
 ## Register:
 
@@ -318,7 +318,7 @@ Arduino UNO Pinout Diyagramı:
 
 ### MCUCR (MCU Control Register):
 
-![ATmega328p Data Sheet, Sayfa 72](https://github.com/Mona-Roza/avr_101/images/MCUCR.png)
+![ATmega328p Data Sheet, Sayfa 72](/images/MCUCR.png)
 ATmega328p Data Sheet, Sayfa 72
 
 * Mikrodenetleyicinin denetimi ile ilgili 5 biti bulunur. Bu bitleri 0 ya da 1 yaparak ayarlamaları yaparız.
