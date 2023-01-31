@@ -99,7 +99,7 @@ Derlenen kodların, avrdude aracılığıyla mikrokontrolcüye doğru bir şekil
 
 1. Arduino IDE'de yüklü gelen örnek kodlardan bir tanesini açın:
 
-[![](https://github.com/Mona-Roza/avr_101/images/Ekran%20Resmi%202022-12-08%2001.35.04.png)](https://github.com/Mona-Roza/avr_101/images/Ekran%20Resmi%202022-12-08%2001.35.04.png)
+[![](/images/Ekran%20Resmi%202022-12-08%2001.35.04.png)](/images/Ekran%20Resmi%202022-12-08%2001.35.04.png)
 
 2. Arduino'yu usb konnektörü ile bilgisayarınıza bağlayın.
 
