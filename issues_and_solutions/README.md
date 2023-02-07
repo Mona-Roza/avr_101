@@ -1,16 +1,16 @@
 ## İçindekiler
 
-* [Arduino As ISP](https://github.com/Mona-Roza/Notes/tree/main/embedded_systems/issues_and_solutions#arduino-as-isp)
+* [Arduino As ISP](#arduino-as-isp)
 
-    * [Arduino'nun Programlayıcı Olarak Kullanılması](https://github.com/Mona-Roza/Notes/tree/main/embedded_systems/issues_and_solutions#arduinonun-programlayıcı-olarak-kullanılması-sorunlar-ve-çözümler)
+    * [Arduino'nun Programlayıcı Olarak Kullanılması](#arduinonun-programlayıcı-olarak-kullanılması-sorunlar-ve-çözümler)
 
-    * [Arduino ile Başka Bir Arduino'ya Bootloader Yüklenmesi](https://github.com/Mona-Roza/Notes/tree/main/embedded_systems/issues_and_solutions#arduino-ile-başka-bir-arduinoya-bootloader-yüklenmesi)
+    * [Arduino ile Başka Bir Arduino'ya Bootloader Yüklenmesi](#arduino-ile-başka-bir-arduinoya-bootloader-yüklenmesi)
 
-    * [Arduino As ISP Yaşanabilecek Sorunlar ve Çözümleri](https://github.com/Mona-Roza/Notes/tree/main/embedded_systems/issues_and_solutions#arduino-as-isp-yaşanabilecek-sorunlar-ve-çözümleri)
+    * [Arduino As ISP Yaşanabilecek Sorunlar ve Çözümleri](#arduino-as-isp-yaşanabilecek-sorunlar-ve-çözümleri)
 
-        * [avrdude: Device signature = 0xffffff](https://github.com/Mona-Roza/Notes/tree/main/embedded_systems/issues_and_solutions#avrdude-device-signature--0xffffff)
+        * [avrdude: Device signature = 0xffffff](#avrdude-device-signature--0xffffff)
         
-        * [avrdude: Expected signature for ATMEGA328P is 1E 95 0F](https://github.com/Mona-Roza/Notes/tree/main/embedded_systems/issues_and_solutions#avrdude-expected-signature-for-atmega328p-is-1e-95-0f)
+        * [avrdude: Expected signature for ATMEGA328P is 1E 95 0F](#avrdude-expected-signature-for-atmega328p-is-1e-95-0f)
 
 ## Arduino As ISP:
 
