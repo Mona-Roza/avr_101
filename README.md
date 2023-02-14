@@ -385,6 +385,14 @@ ATmega328p Data Sheet, Sayfa 72
 
   * Tri-state: Ne mantıksal HIGH ne de mantıksal LOW demektir. Hükmü olmayan bir durumu temsil eder.
 
+![port-pin-config](/images/port_pin_config.png)
+Resim: ATmega328P – Microchip Technology, sf:60
+
+* Yukarıda, data sheetten alınan tabloda, portlarda oluşan durumların registerlerdeki hangi değerlerle oluştuğu verilmiştir.
+
+| ![dip-kılıf](/images/atmega328p_dip.jpeg) | ![smt-kılıf](/images/atmega328p_smt.png) |
+|---|---|
+
 ## Kaynaklar
 
 1. <https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf>
