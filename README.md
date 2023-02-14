@@ -1,4 +1,6 @@
-# İçindekiler
+# AVR 101
+
+## İçindekiler
 
 * [Başlarken](#başlarken)
 
@@ -26,19 +28,19 @@
 
 * [Temel Giriş Çıkış İşlemleri](#temel-giriş-çıkış-i̇şlemleri)
 
-# Başlarken
+## Başlarken
 
 Bu bölümde C programlama dili ile AVR mikrokontrolcü programlama hakkındaki notlarım bulunmaktadır. Burada prototipleme için ATmega328p çipine sahip Arduino UNO veya ATmega328pb çipine sahip Arduino Nano kullanılmıştır.
 
-# Kurulum
+## Kurulum
 
 Aşağıdaki bölümlerde MacOS X ve Windows için kurulumlar aşamalarıyla anlatılacaktır.
 
-## MacOS X Kurulum
+### MacOS X Kurulum
 
 MacOS'ta kurulum yapabilmek için bir paket yöneticisi olan **Homebrew**'e ihtiyacımız var. Homebrew sisteminizde yüklü değilse önce Homebrew'i yüklemeniz gerekir. Ayrıca Homebrew, Xcode komut satırı araçlarının yüklenmesini de gerektirir. Bunun için öncelikle terminalimizi açıyoruz. Ardından sırasıyla ve tek tek olmak üzere aşağıdaki satırları terminalimize yazıyoruz:
 
-### Paket yöneticisi Homebrew'in indirilmesi
+#### Paket yöneticisi Homebrew'in indirilmesi
 
 > Bu komut Xcode komut satırı araçlarını indirir:
 
@@ -52,7 +54,7 @@ MacOS'ta kurulum yapabilmek için bir paket yöneticisi olan **Homebrew**'e ihti
 
 `brew update`
 
-### Gerekli araçların indirilmesi
+#### Gerekli araçların indirilmesi
 
 `brew tap osx-cross/awr`
 
@@ -76,7 +78,7 @@ MacOS'ta kurulum yapabilmek için bir paket yöneticisi olan **Homebrew**'e ihti
 
 `brew install git`
 
-### Kontrol
+#### Kontrol
 
 Aşağıdaki komutlar ile indirdiğimiz araçların doğru şekilde kurulup kurulmadığını kontrol edebilirsiniz:
 
@@ -92,7 +94,7 @@ Aşağıdaki komutlar ile indirdiğimiz araçların doğru şekilde kurulup kuru
 
 ![terminal-cıktısı](/images/Ekran%20Resmi%202022-12-08%2000.28.14.png)
 
-### Port numarasının bulunması
+#### Port numarasının bulunması
 
 Derlenen kodların, avrdude aracılığıyla mikrokontrolcüye doğru bir şekilde iletilebilmesi için öncelikle kartımızı bağladığımız usb portunu öğrenmemiz gerekiyor. Bunu yapabilmek için Arduino IDE'yi **[indirip](https://www.arduino.cc/en/software)** kurmanız gerekiyor. Arduino ideyi kurduktan sonra, aşağıdaki adımları takip edin:
 
@@ -124,7 +126,7 @@ Derlenen kodların, avrdude aracılığıyla mikrokontrolcüye doğru bir şekil
 
 8. Artık Arduino IDE'yi kapatabilirsiniz.
 
-### Test Kodunun Çalıştırılması
+#### Test Kodunun Çalıştırılması
 
 1. Herhangi bir editör aracılığıyla aşağıdaki kodu main.c isimli bir dosyaya kaydedin.
 
@@ -166,11 +168,11 @@ Derlenen kodların, avrdude aracılığıyla mikrokontrolcüye doğru bir şekil
 
 5. Test kodu, arduinonuz üzerindeki dahili ledi 1 saniye aralıklarla yanıp söndürmek içindir. Başarı ile çalışıyorsa, artık test kodu çalıştırma adımlarını tekrarlayarak c kodlarınızı arduino üzerinde çalıştırabilirsiniz.
 
-## Windows Kurulum
+### Windows Kurulum
 
 Sırasıyla aşağıdaki işlemler takip edilmelidir.
 
-### Git Kurulumu
+#### Git Kurulumu
 
 1. Öncelikle bilgisayarınıza uygun **[git kurulum dosyasını](https://git-scm.com/download/win)** indirin.
     ![git-indir](/images/git_indir.png)
@@ -193,7 +195,7 @@ Sırasıyla aşağıdaki işlemler takip edilmelidir.
 
 7. Git'i **[Ortam Değişkenlerine ekleyin.](#ortam-değişkenlerine-ekleme)**
 
-#### avr-gcc'nin Kurulumu
+##### avr-gcc'nin Kurulumu
 
 1. Zip dosyasını **[indirin.](https://git-scm.com/download/win)**
 
@@ -203,7 +205,7 @@ Sırasıyla aşağıdaki işlemler takip edilmelidir.
 
 3. avr-gcc'yi **[Ortam Değişkenlerine ekleyin.](/#ortam-değişkenlerine-ekleme)**
 
-### Ortam Değişkenlerine Ekleme
+#### Ortam Değişkenlerine Ekleme
 
 1. Windows Arama Menüsü'ne Ortam Değişkenleri yazarak "Sistem Ortam Değişkenlerini Düzenleyin" seçeneğine tıklayın.
 
@@ -226,7 +228,7 @@ Sırasıyla aşağıdaki işlemler takip edilmelidir.
 | ![kaydet](/images/ortam_degiskenini_kaydet.png) | ![ozellik-kaydet](/images/sistem_ozellikleri_kaydet.png) |
 |---|---|
 
-### Windows'ta Kontrol
+#### Windows'ta Kontrol
 
 1. CMD'yi açın.
 
@@ -243,7 +245,7 @@ komutlarını çalıştırın. Terminal çıktınız aşağıdaki gibi gözükme
 
 ![terminal](/images/teminal.png)
 
-### Port Numarasının Bulunması
+#### Port Numarasının Bulunması
 
 Derlenen kodların, avrdude aracılığıyla mikrokontrolcüye doğru bir şekilde iletilebilmesi için öncelikle kartımızı bağladığımız usb portunu öğrenmemiz gerekiyor. Bunu yapabilmek için Arduino IDE'yi **[indirip](https://www.arduino.cc/en/software)** kurmanız gerekiyor. Ardunio ideyi kurduktan sonra, aşağıdaki adımları takip edin:
 
@@ -257,7 +259,7 @@ Derlenen kodların, avrdude aracılığıyla mikrokontrolcüye doğru bir şekil
 
 4. Artık Arduino IDE'yi kapatabilirsiniz.
 
-### Windows'ta Test Kodunun Çalıştırılması
+#### Windows'ta Test Kodunun Çalıştırılması
 
 1. Herhangi bir editör aracılığıyla aşağıdaki kodu main.c isimli bir dosyaya kaydedin.
 
@@ -304,13 +306,13 @@ Derlenen kodların, avrdude aracılığıyla mikrokontrolcüye doğru bir şekil
 
 5. Test kodu, Arduinonuz üzerindeki dahili ledi 1 saniye aralıklarla yanıp söndürmek içindir. Başarı ile çalışıyorsa, artık test kodu çalıştırma adımlarını tekrarlayarak c kodlarınızı Ardunio üzerinde çalıştırabilirsiniz.
 
-# C ile AVR Programlama
+## C ile AVR Programlama
 
 Arduino UNO Pinout Diyagramı:
 
 ![pinout](/images/aduino_pinout.jpeg)
 
-## Register
+### Register
 
 * Register; 8 ile 64 bit arasında, 2'nin kuvvetleri biçiminde, veri tutabilen bir bellek öbeğidir. Her bite 1 veya 0 değeri atanır. Microcontroller'daki bir çok farklı yazmaçtaki her bitin değeri sistemin geri kalanına ne zaman, ne yapacağını söyler. Arduino üzerinde bulundan ATmega328p çipindeki registerlerin çoğu 8 ya da 16 bittir.
 
@@ -320,9 +322,9 @@ Arduino UNO Pinout Diyagramı:
 
 * ATmega328p mikrodenetleyicisinin data sheete yardımı ile, bu mikrodeneyleyicinin çevre birimlerini manipüle ederek programlama yapacağız. Burada I/O (Input/Output) ile alakalı üç ana register ve I/O ile ilişkili bir ayar biti bulunduran bir register ile başlayalım.
 
-## Port Registerleri
+### Port Registerleri
 
-### MCUCR (MCU Control Register)
+#### MCUCR (MCU Control Register)
 
 ![ATmega328p Data Sheet, Sayfa 72](/images/MCUCR.png)
 ATmega328p Data Sheet, Sayfa 72
@@ -333,7 +335,7 @@ ATmega328p Data Sheet, Sayfa 72
 
 * Bu registerin bazı bitleri sadece okunabilirken bazıları hem okunabilir hem de yazılabilirdir. 0, 1 ve 4 numaralı bitler hem okunabilir hem de yazılabilirken 2, 3, 5, 6 ve 7. bitler read only yani sadece okunabilir bitlerdir.
 
-#### PUD (Pull Up Disable)
+##### PUD (Pull Up Disable)
 
 * MCUCR'nin 4. biti PUD'dur.
 
@@ -341,7 +343,7 @@ ATmega328p Data Sheet, Sayfa 72
 
 * Bu bit 1 olduğunda, başka registerlerde tanımlanan Pull-Up enable'ın bir anlamı olmaz.
 
-### DDRx (The Port x Data Direction Register)
+#### DDRx (The Port x Data Direction Register)
 
 * Belirtilen x, pinout diyagramda görülebilen portların temsilidir. x yerine yazılacak port adı, program akışında, komponentlerin bağlandığı yerlere göre değişkenlik gösterir.
 
@@ -349,7 +351,7 @@ ATmega328p Data Sheet, Sayfa 72
 
 * Bu registerin bitlerini 1 yapmak, o bitin output olduğunu, 0 yapmak ise o bitin output olduğunu söyler. Örneğin B portunun 0. ayağına (Arduino kartının 8. pini) bir led bağladıysak burada bu ayağı output olarak işretlemeliyiz yani `DDRB |= 0b00000001`veya `DDRB |= 0x01` şeklinde bir tanımlama yapmalıyız.
 
-### PORTx (The Port x Data Register)
+#### PORTx (The Port x Data Register)
 
 * AVR mikrodenetleyicilerinde G/Ç yapılan bitler 8 bitlik port olarak bir araya toplanmıştır.
 
@@ -361,7 +363,7 @@ ATmega328p Data Sheet, Sayfa 72
 
 * Portların 8'li ayak grubu olması tek bir ayak üzerinden işlem yapılamayacağı anlamına gelmez. Ancak doğrudan değil dolaylı olarak bu işlemi gerçekleştiririz.
 
-### PINx (The Port x Input Pins Address)
+#### PINx (The Port x Input Pins Address)
 
 * Dijital giriş için kullanılan yazmaçtır.
 
@@ -369,7 +371,7 @@ ATmega328p Data Sheet, Sayfa 72
 
 * DDRx ile giriş olarak tanımlanan portlardan/pinlerden dığrudan port veya pin okuma yöntemi ile registerden elde edilen değer sonrasında mikrodenetleyicinin hafıza birimlerine kaydedilir ve bu değer üzerinde işlem yapılarak çıkış birimlerine iletilir. Burada verinin okunduktan sorna nasıl kaydedileceği, işleneceği ve çıkış olarak verileceği programcının yazdığı programa bağlıdır.
 
-## Temel Giriş Çıkış İşlemleri
+### Temel Giriş Çıkış İşlemleri
 
 * Portların ayakları Input, Input Pull-Up, Sink, Source ve Tri-State konumlarında olabilir.
 
@@ -383,7 +385,7 @@ ATmega328p Data Sheet, Sayfa 72
 
   * Tri-state: Ne mantıksal HIGH ne de mantıksal LOW demektir. Hükmü olmayan bir durumu temsil eder.
 
-# Kaynaklar
+## Kaynaklar
 
 1. <https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf>
 
