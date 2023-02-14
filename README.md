@@ -1,18 +1,30 @@
 # İçindekiler
 
 * [Başlarken](#başlarken)
+
 * [Kurulum](#kurulum)
+
   * [MacOS X Kurulum](#macos-x-kurulum)
+
   * [Windows Kurulum](#windows-kurulum)
+
 * [C ile AVR Programlama](#c-ile-avr-programlama)
+
   * [Register](#register)
+
   * [Port Registerleri](#port-registerleri)
+
     * [MCUCR (MCU Control Register)](#mcucr-mcu-control-register)
+
       * [PUD (Pull Up Disable)](#pud-pull-up-disable)
+
     * [DDRx (The Port x Data Direction Register)](#ddrx-the-port-x-data-direction-register)
-    * [PORTx (The Port x Data Register)](#portx-the-port-x-data-register)
-    * [PINx (The Port x Input Pins Address)](#pinx-the-port-x-input-pins-address)
-  * [Temel Giriş Çıkış İşlemleri](#temel-giriş-çıkış-i̇şlemleri)
+
+* [PORTx (The Port x Data Register)](#portx-the-port-x-data-register)
+
+  * [PINx (The Port x Input Pins Address)](#pinx-the-port-x-input-pins-address)
+
+* [Temel Giriş Çıkış İşlemleri](#temel-giriş-çıkış-i̇şlemleri)
 
 # Başlarken
 
@@ -214,7 +226,7 @@ Sırasıyla aşağıdaki işlemler takip edilmelidir.
 | ![kaydet](/images/ortam_degiskenini_kaydet.png) | ![ozellik-kaydet](/images/sistem_ozellikleri_kaydet.png) |
 |---|---|
 
-### Kontrol
+### Windows'ta Kontrol
 
 1. CMD'yi açın.
 
@@ -245,7 +257,7 @@ Derlenen kodların, avrdude aracılığıyla mikrokontrolcüye doğru bir şekil
 
 4. Artık Arduino IDE'yi kapatabilirsiniz.
 
-### Test Kodunun Çalıştırılması
+### Windows'ta Test Kodunun Çalıştırılması
 
 1. Herhangi bir editör aracılığıyla aşağıdaki kodu main.c isimli bir dosyaya kaydedin.
 
