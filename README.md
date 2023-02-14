@@ -161,7 +161,6 @@ Sırasıyla aşağıdaki işlemler takip edilmelidir.
 ### Git Kurulumu
 
 1. Öncelikle bilgisayarınıza uygun **[git kurulum dosyasını](https://git-scm.com/download/win)** indirin.
-
     ![git-indir](/images/git_indir.png)
 
 2. Dosyayı indirdiğiniz konuma gidin ve dosyayı başlatın.
