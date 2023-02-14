@@ -211,7 +211,7 @@ Sırasıyla aşağıdaki işlemler takip edilmelidir.
 
 5. Tekrar "Tamam" butonlarına basarak Ortam Değişkenleri ve Sistem Özellikleri menülerini kapatın.
 
-    | ![kaydet](/images/ortam_degiskenini_kaydet.png) | ![ozellik-kaydet](/images/sistem_ozellikleri_kaydet.png) |
+| ![kaydet](/images/ortam_degiskenini_kaydet.png) | ![ozellik-kaydet](/images/sistem_ozellikleri_kaydet.png) |
 |---|---|
 
 ### Kontrol
@@ -220,7 +220,7 @@ Sırasıyla aşağıdaki işlemler takip edilmelidir.
 
 2. Sırasıyla
 
-```
+```bash
 avr-gcc --version
 make --version
 git --version
@@ -229,9 +229,9 @@ avrdude
 
 komutlarını çalıştırın. Terminal çıktınız aşağıdaki gibi gözükmelidir:
 
-[![](/images/teminal.png)](/images/teminal.png)
+![terminal](/images/teminal.png)
 
-### Port numarasının bulunması
+### Port Numarasının Bulunması
 
 Derlenen kodların, avrdude aracılığıyla mikrokontrolcüye doğru bir şekilde iletilebilmesi için öncelikle kartımızı bağladığımız usb portunu öğrenmemiz gerekiyor. Bunu yapabilmek için Arduino IDE'yi **[indirip](https://www.arduino.cc/en/software)** kurmanız gerekiyor. Ardunio ideyi kurduktan sonra, aşağıdaki adımları takip edin:
 
@@ -241,7 +241,7 @@ Derlenen kodların, avrdude aracılığıyla mikrokontrolcüye doğru bir şekil
 
 3. Arduino IDE üzerinden "Tools" menüsünü açın ardından "Port" seçeneğinin üzerine gelin ve açılan yerden port adınızı not defterinize kaydedin.
 
-[![](/images/port.png)](/images/port.png)
+    ![port](/images/port.png)
 
 4. Artık Arduino IDE'yi kapatabilirsiniz.
 
@@ -249,42 +249,46 @@ Derlenen kodların, avrdude aracılığıyla mikrokontrolcüye doğru bir şekil
 
 1. Herhangi bir editör aracılığıyla aşağıdaki kodu main.c isimli bir dosyaya kaydedin.
 
-```c
-#include <avr/io.h>
-#include <util/delay.h>
- 
-#define BLINK_DELAY_MS 1000
- 
-int main (void)
-{
- /* set pin 5 of PORTB for output*/
- DDRB |= _BV(DDB5);
- 
- while(1) {
-  /* set pin 5 high to turn led on */
-  PORTB |= _BV(PORTB5);
-  _delay_ms(BLINK_DELAY_MS);
- 
-  /* set pin 5 low to turn led off */
-  PORTB &= ~_BV(PORTB5);
-  _delay_ms(BLINK_DELAY_MS);
- }
-}
-```
+    ```c
+        #include <avr/io.h>
+        #include <util/delay.h>
+         
+        #define BLINK_DELAY_MS 1000
+         
+        int main (void)
+        {
+            /* set pin 5 of PORTB for output*/
+            DDRB |= _BV(DDB5);
+         
+            while(1) {
+                /* set pin 5 high to turn led on */
+                PORTB |= _BV(PORTB5);
+                _delay_ms(BLINK_DELAY_MS);
+         
+                /* set pin 5 low to turn led off */
+                PORTB &= ~_BV(PORTB5);
+                _delay_ms(BLINK_DELAY_MS);
+            }
+        }
+    ```
 
 2. Terminalden dosyayı oluşturduğunuz klasöre `cd klasör_ismi` komutuyla girin.
 
 3. Ardından derleme işlemlerini yapmanız gerekiyor. Sırasıyla aşağıdaki komutları girin:
 
-`avr-gcc -Os -DF_CPU=16000000UL -mmcu=atmega328p -c -o main.o main.c`
+    ```bash
+    avr-gcc -Os -DF_CPU=16000000UL -mmcu=atmega328p -c -o main.o main.c
 
-`avr-gcc -mmcu=atmega328p main.o -o main`
+    avr-gcc -mmcu=atmega328p main.o -o main
 
-`avr-objcopy -O ihex -R .eeprom main main.hex`
+    avr-objcopy -O ihex -R .eeprom main main.hex
+    ```
 
 4. Not defterine kaydettiğiniz port adınızı aşağıdaki komutta **port_name** ile belirtilen kısma yazın ve komutu çalıştırın.
 
-`avrdude -F -V -c arduino -p ATMEGA328P -P port_name -b 115200 -U flash:w:main.hex`
+    ```bash
+    avrdude -F -V -c arduino -p ATMEGA328P -P port_name -b 115200 -U flash:w:main.hex
+    ```
 
 5. Test kodu, Arduinonuz üzerindeki dahili ledi 1 saniye aralıklarla yanıp söndürmek içindir. Başarı ile çalışıyorsa, artık test kodu çalıştırma adımlarını tekrarlayarak c kodlarınızı Ardunio üzerinde çalıştırabilirsiniz.
 
@@ -292,7 +296,7 @@ int main (void)
 
 Arduino UNO Pinout Diyagramı:
 
-[![](/images/aduino_pinout.jpeg)](https://forum.arduino.cc/t/arduino-uno-pinout-diagram/142856)
+![pinout](/images/aduino_pinout.jpeg)
 
 ## Register
 
