@@ -204,7 +204,7 @@ Sırasıyla aşağıdaki işlemler takip edilmelidir.
 
    <img src="images/avr_zip_ayikla.png" alt="" width="500" height="400">
 
-3. avr-gcc'yi **[Ortam Değişkenlerine ekleyin.](/#ortam-değişkenlerine-ekleme)**
+3. avr-gcc'yi **[Ortam Değişkenlerine ekleyin.](#ortam-değişkenlerine-ekleme)**
 
 #### Ortam Değişkenlerine Ekleme
 
