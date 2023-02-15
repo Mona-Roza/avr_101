@@ -168,7 +168,9 @@ Derlenen kodların, avrdude aracılığıyla mikrokontrolcüye doğru bir şekil
 
 4. Not defterine kaydettiğiniz port adınızı aşağıdaki komutta **port_name** ile belirtilen kısma yazın ve komutu çalıştırın.
 
-    `avrdude -F -V -c arduino -p ATMEGA328P -P  /dev/port_name -b 115200 -U flash:w:main.hex`
+    ```bash
+    avrdude -F -V -c arduino -p ATMEGA328P -P  /dev/port_name -b 115200 -U flash:w:main.hex
+    ```
 
 5. Test kodu, arduinonuz üzerindeki dahili ledi 1 saniye aralıklarla yanıp söndürmek içindir. Başarı ile çalışıyorsa, artık test kodu çalıştırma adımlarını tekrarlayarak c kodlarınızı arduino üzerinde çalıştırabilirsiniz.
 
@@ -269,26 +271,26 @@ Derlenen kodların, avrdude aracılığıyla mikrokontrolcüye doğru bir şekil
 1. Herhangi bir editör aracılığıyla aşağıdaki kodu main.c isimli bir dosyaya kaydedin.
 
     ```c
-        #include <avr/io.h>
-        #include <util/delay.h>
-         
-        #define BLINK_DELAY_MS 1000
-         
-        int main (void)
-        {
-            /* set pin 5 of PORTB for output*/
-            DDRB |= _BV(DDB5);
-         
-            while(1) {
-                /* set pin 5 high to turn led on */
-                PORTB |= _BV(PORTB5);
-                _delay_ms(BLINK_DELAY_MS);
-         
-                /* set pin 5 low to turn led off */
-                PORTB &= ~_BV(PORTB5);
-                _delay_ms(BLINK_DELAY_MS);
-            }
+    #include <avr/io.h>
+    #include <util/delay.h>
+
+    #define BLINK_DELAY_MS 1000
+
+    int main (void)
+    {
+        /* set pin 5 of PORTB for output*/
+        DDRB |= _BV(DDB5);
+        
+        while(1) {
+            /* set pin 5 high to turn led on */
+            PORTB |= _BV(PORTB5);
+            _delay_ms(BLINK_DELAY_MS);
+        
+            /* set pin 5 low to turn led off */
+            PORTB &= ~_BV(PORTB5);
+            _delay_ms(BLINK_DELAY_MS);
         }
+    }
     ```
 
 2. Terminalden dosyayı oluşturduğunuz klasöre `cd klasör_ismi` komutuyla girin.
