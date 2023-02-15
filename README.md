@@ -390,7 +390,7 @@ Resim: ATmega328P – Microchip Technology, sf:60
 
 * Yukarıda, data sheetten alınan tabloda, portlarda oluşan durumların registerlerdeki hangi değerlerle oluştuğu verilmiştir.
 
-| <img src="/images/atmega328p_dip.jpeg" alt= "dip-kılıf" width="400" height="300"> | <img src="/images/atmega328p_smt.jpeg" alt="smt-kılıf" width="400" height="300"> |
+| <img src="/images/atmega328p_dip.jpeg" alt= "dip-kılıf" width="400" height="300"> | <img src="/images/atmega328p_smt.png" alt="smt-kılıf" width="400" height="300"> |
 |---|---|
 
 ## Kaynaklar
