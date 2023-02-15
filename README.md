@@ -312,6 +312,7 @@ Derlenen kodların, avrdude aracılığıyla mikrokontrolcüye doğru bir şekil
 Arduino UNO Pinout Diyagramı:
 
 <img src="images/aduino_pinout.jpeg" alt="" width="500" height="400">
+
 [Resim 0.1](https://commons.wikimedia.org/wiki/File:Arduino-uno-pinout.png)
 
 ### Register
@@ -329,6 +330,7 @@ Arduino UNO Pinout Diyagramı:
 #### MCUCR (MCU Control Register)
 
 <img src="mages/MCUCR.png" alt="" width="500" height="400">
+
 [Resim 1.1](https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf#page=72)
 
 * Mikrodenetleyicinin denetimi ile ilgili 5 biti bulunur. Bu bitleri 0 ya da 1 yaparak ayarlamaları yaparız.
@@ -388,6 +390,7 @@ Arduino UNO Pinout Diyagramı:
   * Tri-state: Ne mantıksal HIGH ne de mantıksal LOW demektir. Hükmü olmayan bir durumu temsil eder.
 
 <img src="images/port_pin_config.png" alt="" width="500" height="400">
+
 [Resim 3.1](https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf#page=60)
 
 * Yukarıda, data sheetten alınan tabloda, portlarda oluşan durumların registerlerdeki hangi değerlerle oluştuğu verilmiştir.
