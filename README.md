@@ -328,7 +328,7 @@ Arduino UNO Pinout Diyagramı:
 #### MCUCR (MCU Control Register)
 
 ![ATmega328p Data Sheet, Sayfa 72](/images/MCUCR.png)
-[Resim 1.1](ATmega328p Data Sheet, Sayfa 72)
+[Resim 1.1](https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf#page=72)
 
 * Mikrodenetleyicinin denetimi ile ilgili 5 biti bulunur. Bu bitleri 0 ya da 1 yaparak ayarlamaları yaparız.
 
@@ -387,7 +387,7 @@ Arduino UNO Pinout Diyagramı:
   * Tri-state: Ne mantıksal HIGH ne de mantıksal LOW demektir. Hükmü olmayan bir durumu temsil eder.
 
 ![port-pin-config](/images/port_pin_config.png)
-[Resim 3.1](ATmega328P – Microchip Technology, sf:60)
+[Resim 3.1](https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf#page=60)
 
 * Yukarıda, data sheetten alınan tabloda, portlarda oluşan durumların registerlerdeki hangi değerlerle oluştuğu verilmiştir.
 
@@ -405,9 +405,9 @@ Arduino UNO Pinout Diyagramı:
 
 4. Resim 0.1: <https://commons.wikimedia.org/wiki/File:Arduino-uno-pinout.png>
 
-5. Resim 1.1: ATmega328p Data Sheet, Sayfa 72
+5. Resim 1.1: <https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf#page=72>
 
-6. Resim 3.1 ATmega328P – Microchip Technology, sf:60
+6. Resim 3.1 <https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf#page=60>
 
 7. Resim 3.2: <https://doc.riot-os.org/group__boards__atmega328p.html>
 
