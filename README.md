@@ -329,7 +329,7 @@ Arduino UNO Pinout Diyagramı:
 
 #### MCUCR (MCU Control Register)
 
-<img src="images/MCUCR.png" alt=""  width="800" height="150">
+<img src="images/MCUCR.png" alt="" width="800" height="150">
 
 [Resim 1.1](https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf#page=72)
 
