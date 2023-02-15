@@ -92,7 +92,7 @@ Aşağıdaki komutlar ile indirdiğimiz araçların doğru şekilde kurulup kuru
 
 > Terminal çıktınız yaklaşık bu şekilde olmalıdır:
 
-![terminal-cıktısı](/images/Ekran%20Resmi%202022-12-08%2000.28.14.png)
+![images/Ekran%20Resmi%202022-12-08%2000.28.14.png](images/Ekran%20Resmi%202022-12-08%2000.28.14.png)
 
 #### Port numarasının bulunması
 
@@ -100,29 +100,29 @@ Derlenen kodların, avrdude aracılığıyla mikrokontrolcüye doğru bir şekil
 
 1. Arduino IDE'de yüklü gelen örnek kodlardan bir tanesini açın:
 
-    ![örnek kod](/images/Ekran%20Resmi%202022-12-08%2001.35.04.png)
+    ![images/Ekran%20Resmi%202022-12-08%2001.35.04.png](images/Ekran%20Resmi%202022-12-08%2001.35.04.png)
 
 2. Arduino'yu usb konnektörü ile bilgisayarınıza bağlayın.
 
 3. Arduino'yu bağladığınız portu ide üzerinden seçin.
 
-    ![port](/images/Ekran%20Resmi%202022-12-08%2001.41.42.png)
+    ![images/Ekran%20Resmi%202022-12-08%2001.41.42.png](images/Ekran%20Resmi%202022-12-08%2001.41.42.png)
 
 4. Ardunio IDE'nin tercihler menüsünü açın.
 
-    ![tercihler](/images/Ekran%20Resmi%202022-12-08%2001.45.13.png)]
+    ![images/Ekran%20Resmi%202022-12-08%2001.45.13.png)](images/Ekran%20Resmi%202022-12-08%2001.45.13.png)
 
 5. Tercihler menüsünde "Yükleme sırasında ayrıntılı çıktı göster" seçeneğini aktif edin ve tercihler menüsünü kaydederek kapatın.
 
-    ![tercihleri-kaydet](/images/Ekran%20Resmi%202022-12-08%2001.48.08.png)
+    ![images/Ekran%20Resmi%202022-12-08%2001.48.08.png](images/Ekran%20Resmi%202022-12-08%2001.48.08.png)
 
 6. Kodu derleyin ve kartınıza yükleyin.
 
-    ![derle-ve-yükle](/images/Ekran%20Resmi%202022-12-08%2001.53.12.png)
+    ![images/Ekran%20Resmi%202022-12-08%2001.53.12.png](images/Ekran%20Resmi%202022-12-08%2001.53.12.png)
 
 7. Ardından output kısmını genişletin ve çıktının en üzerinde belirtilen yerdeki port adınızı kopyalayıp not defterinize kaydedin.
 
-    ![output](/images/Ekran%20Resmi%202022-12-08%2001.57.25.png)
+    ![images/Ekran%20Resmi%202022-12-08%2001.57.25.png](images/Ekran%20Resmi%202022-12-08%2001.57.25.png)
 
 8. Artık Arduino IDE'yi kapatabilirsiniz.
 
@@ -175,7 +175,7 @@ Sırasıyla aşağıdaki işlemler takip edilmelidir.
 #### Git Kurulumu
 
 1. Öncelikle bilgisayarınıza uygun **[git kurulum dosyasını](https://git-scm.com/download/win)** indirin.
-    ![git-indir](/images/git_indir.png)
+    ![git-indir](images/git_indir.png)
 
 2. Dosyayı indirdiğiniz konuma gidin ve dosyayı başlatın.
 
@@ -183,15 +183,15 @@ Sırasıyla aşağıdaki işlemler takip edilmelidir.
 
 4. Install'a basarak devam edin.
 
-    ![bilgilendirme](images/bilgilendirme.png)
+    ![images/bilgilendirme.png](images/bilgilendirme.png)
 
 5. Kurulumun bitmesini bekleyin.
 
-    ![yukleme](/images/yukleme.png)
+    ![images/yukleme.png](images/yukleme.png)
 
 6. Finish'e basarak kurulumu tamamlayın.
 
-    ![bitir](/images/bitir.png)
+    ![images/bitir.png](images/bitir.png)
 
 7. Git'i **[Ortam Değişkenlerine ekleyin.](#ortam-değişkenlerine-ekleme)**
 
@@ -201,7 +201,7 @@ Sırasıyla aşağıdaki işlemler takip edilmelidir.
 
 2. Zip dosyasını kaydedeceğiniz konuma ayıklayın.
 
-    ![avr-zip-ayikla](/images/avr_zip_ayikla.png)
+    ![images/avr_zip_ayikla.png](images/avr_zip_ayikla.png)
 
 3. avr-gcc'yi **[Ortam Değişkenlerine ekleyin.](/#ortam-değişkenlerine-ekleme)**
 
@@ -209,23 +209,23 @@ Sırasıyla aşağıdaki işlemler takip edilmelidir.
 
 1. Windows Arama Menüsü'ne Ortam Değişkenleri yazarak "Sistem Ortam Değişkenlerini Düzenleyin" seçeneğine tıklayın.
 
-    ![ortam-degiskenleri](/images/ortam_degiskenleri_arama.png)
+    ![images/ortam_degiskenleri_arama.png](images/ortam_degiskenleri_arama.png)
 
 2. Sistem Özellikleri Menüsünde bulunan "Ortam Değişkenleri..." butonuna tıklayın.
 
-    ![sistem-ozellikleri](/images/sistem_ozellikleri.png)
+    ![images/sistem_ozellikleri.png](images/sistem_ozellikleri.png)
 
 3. Ortam Değişkenleri menüsünün kullanıcı değişkenleri kısmından "Path"i seçerek "Düzenle..." butonuna tıklayın.
 
-    ![ortam-degiskenleri](/images/ortam_degiskenleri.png)
+    ![images/ortam_degiskenleri.png](images/ortam_degiskenleri.png)
 
 4. Öncelikle "Yeni" butonuna tıklayarak yeni bir satır oluşturun, ardından ortam değişkenlerine eklemek istediğiniz programın "bin" klasörünün yolunu kopyalayıp bu satıra yapıştırın ve "Tamam" butonuna basarak yaptıklarınızı kaydedin.
 
-    ![duzenle](/images/ortam_desikenlerini_duzenle.png)
+    ![images/ortam_desikenlerini_duzenle.png](images/ortam_desikenlerini_duzenle.png)
 
 5. Tekrar "Tamam" butonlarına basarak Ortam Değişkenleri ve Sistem Özellikleri menülerini kapatın.
 
-| ![kaydet](/images/ortam_degiskenini_kaydet.png) | ![ozellik-kaydet](/images/sistem_ozellikleri_kaydet.png) |
+| ![images/ortam_degiskenini_kaydet.png](images/ortam_degiskenini_kaydet.png) | ![images/sistem_ozellikleri_kaydet.png](images/sistem_ozellikleri_kaydet.png) |
 |---|---|
 
 #### Windows'ta Kontrol
@@ -243,7 +243,7 @@ avrdude
 
 komutlarını çalıştırın. Terminal çıktınız aşağıdaki gibi gözükmelidir:
 
-![terminal](/images/teminal.png)
+![images/port.png](images/teminal.png)
 
 #### Port Numarasının Bulunması
 
@@ -255,7 +255,7 @@ Derlenen kodların, avrdude aracılığıyla mikrokontrolcüye doğru bir şekil
 
 3. Arduino IDE üzerinden "Tools" menüsünü açın ardından "Port" seçeneğinin üzerine gelin ve açılan yerden port adınızı not defterinize kaydedin.
 
-    ![port](/images/port.png)
+    ![images/port.png](images/port.png)
 
 4. Artık Arduino IDE'yi kapatabilirsiniz.
 
@@ -310,7 +310,7 @@ Derlenen kodların, avrdude aracılığıyla mikrokontrolcüye doğru bir şekil
 
 Arduino UNO Pinout Diyagramı:
 
-![pinout](/images/aduino_pinout.jpeg)
+![images/aduino_pinout.jpeg](images/aduino_pinout.jpeg)
 [Resim 0.1](https://commons.wikimedia.org/wiki/File:Arduino-uno-pinout.png)
 
 ### Register
@@ -327,7 +327,7 @@ Arduino UNO Pinout Diyagramı:
 
 #### MCUCR (MCU Control Register)
 
-![ATmega328p Data Sheet, Sayfa 72](/images/MCUCR.png)
+![images/MCUCR.png](images/MCUCR.png)
 [Resim 1.1](https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf#page=72)
 
 * Mikrodenetleyicinin denetimi ile ilgili 5 biti bulunur. Bu bitleri 0 ya da 1 yaparak ayarlamaları yaparız.
@@ -386,12 +386,12 @@ Arduino UNO Pinout Diyagramı:
 
   * Tri-state: Ne mantıksal HIGH ne de mantıksal LOW demektir. Hükmü olmayan bir durumu temsil eder.
 
-![port-pin-config](/images/port_pin_config.png)
+![images/port_pin_config.png](images/port_pin_config.png)
 [Resim 3.1](https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf#page=60)
 
 * Yukarıda, data sheetten alınan tabloda, portlarda oluşan durumların registerlerdeki hangi değerlerle oluştuğu verilmiştir.
 
-| <img src="/images/atmega328p_dip.jpeg" alt= "dip-kılıf" width="400" height="300"> | <img src="/images/atmega328p_smt.png" alt="smt-kılıf" width="400" height="300"> |
+| <img src="images/atmega328p_dip.jpeg" alt= "dip-kılıf" width="400" height="300"> | <img src="images/atmega328p_smt.png" alt="smt-kılıf" width="400" height="300"> |
 |---|---|
 | [Resim 3.2](https://doc.riot-os.org/group__boards__atmega328p.html) | [Resim 3.3](https://www.reddit.com/r/arduino/comments/gyrdii/atmega328p_tqfp32_pinout/) |
 
