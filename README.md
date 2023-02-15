@@ -392,7 +392,7 @@ Resim: ATmega328P – Microchip Technology, sf:60
 
 | <img src="/images/atmega328p_dip.jpeg" alt= "dip-kılıf" width="400" height="300"> | <img src="/images/atmega328p_smt.png" alt="smt-kılıf" width="400" height="300"> |
 |---|---|
-| Resim: <https://doc.riot-os.org/group__boards__atmega328p.html> | Resim: <https://www.reddit.com/r/arduino/comments/gyrdii/atmega328p_tqfp32_pinout/> |
+| Resim: <https://doc.riot-os.org/group__boards__atmega328p.html>    | Resim: <https://www.reddit.com/r/arduino/comments/gyrdii/atmega328p_tqfp32_pinout/> |
 
 ## Kaynaklar
 
