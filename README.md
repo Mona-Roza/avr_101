@@ -92,7 +92,7 @@ Aşağıdaki komutlar ile indirdiğimiz araçların doğru şekilde kurulup kuru
 
 > Terminal çıktınız yaklaşık bu şekilde olmalıdır:
 
-![images/Ekran%20Resmi%202022-12-08%2000.28.14.png](images/Ekran%20Resmi%202022-12-08%2000.28.14.png)
+<img src="images/Ekran%20Resmi%202022-12-08%2000.28.14.png" alt="" width="600" height="500">
 
 #### Port numarasının bulunması
 
