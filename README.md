@@ -158,9 +158,13 @@ Derlenen kodların, avrdude aracılığıyla mikrokontrolcüye doğru bir şekil
 
 3. Ardından derleme işlemlerini yapmanız gerekiyor. Sırasıyla aşağıdaki komutları girin:
 
-    `avr-gcc -Os -DF_CPU=16000000UL -mmcu=atmega328p -c -o main.o main.c`
-    `avr-gcc -mmcu=atmega328p main.o -o main`
-    `avr-objcopy -O ihex -R .eeprom main main.hex`
+    ```bash
+    avr-gcc -Os -DF_CPU=16000000UL -mmcu=atmega328p -c -o main.o main.c
+
+    avr-gcc -mmcu=atmega328p main.o -o main
+
+    avr-objcopy -O ihex -R .eeprom main main.hex
+    ```
 
 4. Not defterine kaydettiğiniz port adınızı aşağıdaki komutta **port_name** ile belirtilen kısma yazın ve komutu çalıştırın.
 
