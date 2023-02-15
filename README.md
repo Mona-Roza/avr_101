@@ -392,7 +392,6 @@ Resim: ATmega328P – Microchip Technology, sf:60
 
 | <img src="/images/atmega328p_dip.jpeg" alt= "dip-kılıf" width="400" height="300"> | <img src="/images/atmega328p_smt.png" alt="smt-kılıf" width="400" height="300"> |
 |---|---|
-| Resim: <https://doc.riot-os.org/group__boards__atmega328p.html>    | Resim: <https://www.reddit.com/r/arduino/comments/gyrdii/atmega328p_tqfp32_pinout/> |
 
 ## Kaynaklar
 
@@ -401,3 +400,7 @@ Resim: ATmega328P – Microchip Technology, sf:60
 2. <https://www.lojikprob.com/avr/c-ile-avr-programlama-60-butun-derslerin-listesi/>
 
 3. <https://www.instructables.com/Microcontroller-Register-Manipulation/>
+
+4. <https://doc.riot-os.org/group__boards__atmega328p.html>
+
+5. <https://www.reddit.com/r/arduino/comments/gyrdii/atmega328p_tqfp32_pinout/>
