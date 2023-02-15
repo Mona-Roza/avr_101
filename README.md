@@ -311,6 +311,7 @@ Derlenen kodların, avrdude aracılığıyla mikrokontrolcüye doğru bir şekil
 Arduino UNO Pinout Diyagramı:
 
 ![pinout](/images/aduino_pinout.jpeg)
+Resim 0.1
 
 ### Register
 
@@ -327,7 +328,7 @@ Arduino UNO Pinout Diyagramı:
 #### MCUCR (MCU Control Register)
 
 ![ATmega328p Data Sheet, Sayfa 72](/images/MCUCR.png)
-ATmega328p Data Sheet, Sayfa 72
+Resim 1.1
 
 * Mikrodenetleyicinin denetimi ile ilgili 5 biti bulunur. Bu bitleri 0 ya da 1 yaparak ayarlamaları yaparız.
 
@@ -386,13 +387,13 @@ ATmega328p Data Sheet, Sayfa 72
   * Tri-state: Ne mantıksal HIGH ne de mantıksal LOW demektir. Hükmü olmayan bir durumu temsil eder.
 
 ![port-pin-config](/images/port_pin_config.png)
-Resim: ATmega328P – Microchip Technology, sf:60
+Resim 3.1
 
 * Yukarıda, data sheetten alınan tabloda, portlarda oluşan durumların registerlerdeki hangi değerlerle oluştuğu verilmiştir.
 
 | <img src="/images/atmega328p_dip.jpeg" alt= "dip-kılıf" width="400" height="300"> | <img src="/images/atmega328p_smt.png" alt="smt-kılıf" width="400" height="300"> |
 |---|---|
-| Resim 1.1 | Resim 1.2 |
+| Resim 3.2 | Resim 3.3 |
 
 ## Kaynaklar
 
@@ -402,6 +403,12 @@ Resim: ATmega328P – Microchip Technology, sf:60
 
 3. <https://www.instructables.com/Microcontroller-Register-Manipulation/>
 
-4. Resim 1.1: <https://doc.riot-os.org/group__boards__atmega328p.html>
+4. Resim 0.1: <https://commons.wikimedia.org/wiki/File:Arduino-uno-pinout.png>
 
-5. Resim 1.2: <https://www.reddit.com/r/arduino/comments/gyrdii/atmega328p_tqfp32_pinout/>
+5. Resim 1.1: ATmega328p Data Sheet, Sayfa 72
+
+6. Resim 3.1 ATmega328P – Microchip Technology, sf:60
+
+7. Resim 3.2: <https://doc.riot-os.org/group__boards__atmega328p.html>
+
+8. Resim 3.3: <https://www.reddit.com/r/arduino/comments/gyrdii/atmega328p_tqfp32_pinout/>
