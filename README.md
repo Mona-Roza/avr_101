@@ -2,31 +2,33 @@
 
 ## İçindekiler
 
-* [Başlarken](#başlarken)
-
-* [Kurulum](#kurulum)
-
-  * [MacOS X Kurulum](#macos-x-kurulum)
-
-  * [Windows Kurulum](#windows-kurulum)
-
-* [C ile AVR Programlama](#c-ile-avr-programlama)
-
-  * [Register](#register)
-
-  * [Port Registerleri](#port-registerleri)
-
-    * [MCUCR (MCU Control Register)](#mcucr-mcu-control-register)
-
-      * [PUD (Pull Up Disable)](#pud-pull-up-disable)
-
-    * [DDRx (The Port x Data Direction Register)](#ddrx-the-port-x-data-direction-register)
-
-* [PORTx (The Port x Data Register)](#portx-the-port-x-data-register)
-
-  * [PINx (The Port x Input Pins Address)](#pinx-the-port-x-input-pins-address)
-
-* [Temel Giriş Çıkış İşlemleri](#temel-giriş-çıkış-i̇şlemleri)
+- [AVR 101](#avr-101)
+  - [İçindekiler](#i̇çindekiler)
+  - [Başlarken](#başlarken)
+  - [Kurulum](#kurulum)
+    - [MacOS X Kurulum](#macos-x-kurulum)
+      - [Paket yöneticisi Homebrew'in indirilmesi](#paket-yöneticisi-homebrewin-indirilmesi)
+      - [Gerekli araçların indirilmesi](#gerekli-araçların-indirilmesi)
+      - [Kontrol](#kontrol)
+      - [Port numarasının bulunması](#port-numarasının-bulunması)
+      - [Test Kodunun Çalıştırılması](#test-kodunun-çalıştırılması)
+    - [Windows Kurulum](#windows-kurulum)
+      - [Git Kurulumu](#git-kurulumu)
+        - [avr-gcc'nin Kurulumu](#avr-gccnin-kurulumu)
+      - [Ortam Değişkenlerine Ekleme](#ortam-değişkenlerine-ekleme)
+      - [Windows'ta Kontrol](#windowsta-kontrol)
+      - [Port Numarasının Bulunması](#port-numarasının-bulunması-1)
+      - [Windows'ta Test Kodunun Çalıştırılması](#windowsta-test-kodunun-çalıştırılması)
+  - [C ile AVR Programlama](#c-ile-avr-programlama)
+    - [Register](#register)
+    - [Port Registerleri](#port-registerleri)
+      - [MCUCR (MCU Control Register)](#mcucr-mcu-control-register)
+        - [PUD (Pull Up Disable)](#pud-pull-up-disable)
+      - [DDRx (The Port x Data Direction Register)](#ddrx-the-port-x-data-direction-register)
+      - [PORTx (The Port x Data Register)](#portx-the-port-x-data-register)
+      - [PINx (The Port x Input Pins Address)](#pinx-the-port-x-input-pins-address)
+    - [Temel Giriş Çıkış İşlemleri](#temel-giriş-çıkış-i̇şlemleri)
+  - [Kaynaklar](#kaynaklar)
 
 ## Başlarken
 
@@ -405,6 +407,26 @@ Arduino UNO Pinout Diyagramı:
 |---|---|
 | [Resim 3.2](https://doc.riot-os.org/group__boards__atmega328p.html) | [Resim 3.3](https://www.reddit.com/r/arduino/comments/gyrdii/atmega328p_tqfp32_pinout/) |
 
+* Yukarıda Atmega328p mikrokontrolcüsünün iki farklı kılıfı gösterilmiştir. Kılıflar yalnızca devre kartına montaj biçimini belirler. Bu fiziksel değişim mikrokontrolcünün iç mekanizmasında ya da işlenen komutlarda bir farklılık meydana getirmez.
+
+    * [DIP/DIL Kılıf (Dual In-Line Package)](https://en.wikipedia.org/wiki/Dual_in-line_package): Bu kılıf biçiminde montaj komponent ayakları devre üzerindeki deliklerden geçirilerek kartın diğer yüzeyinden lehimleme yapılır. 
+
+    * [SMT Kılıf (Surface-Mount Technology)](https://en.wikipedia.org/wiki/Surface-mount_technology): Bu kılıf biçiminde montaj komponentin bulunacağı yüzeyde gerçekleşir ve lehim bu yüzey üzerinde yapılır.
+
+:warning: Kılıf biçimlerini daha detaylı öğrenebilmek için bu [linki](https://www.youtube.com/watch?v=USR5zm4Dhb0) takip edebilirsiniz.
+
+* Yukarıdaki [pinout](https://en.wikipedia.org/wiki/Pinout) diyagramlarından görüleceği gibi mikrokontrolcünün ayakları port, iletişim, analog veya kesme gibi farklı amaçlar için kullanılabilir durumdadır.
+
+:warning: Bu başlık altında mikrodenetleyici ayaklarının port olarak kullanılması incelenecektir.
+
+* Atmega328p mikrodenetleyicisinin güç ayakları dışındaki tüm ayakları portlardan oluşur. Bu portlar **PORTB**, **PORTC** ve **PORTD** olmak üzere üç adettir.
+
+* PORTD 8 ayaktan oluşurken PORTB ve PORTC mikrokontrolcüdeki kısıtlı ayak sayısı dolayısıyla 8 ayağa sahip değildir. Gelişmiş uygulamalarda bu portların yetersiz gelmesi muhtemeldir.
+
+:warning: Arduino UNO kartında PORTD0 ve PORTD1, RX ve TX olarak kullanıldığından bu ayakları kullanmak iletişim sıkıntıları yaşatabilir. Bu nedenle bu ayakların kullanılmaması önerilir.
+
+* x portunun n'inci ayağı Pxn yada PORTxn biçiminde ifade edilir.
+
 ## Kaynaklar
 
 1. <https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf>
@@ -413,12 +435,16 @@ Arduino UNO Pinout Diyagramı:
 
 3. <https://www.instructables.com/Microcontroller-Register-Manipulation/>
 
-4. Resim 0.1: <https://commons.wikimedia.org/wiki/File:Arduino-uno-pinout.png>
+4. <https://en.wikipedia.org/wiki/Dual_in-line_package>
 
-5. Resim 1.1: <https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf#page=72>
+5. <https://en.wikipedia.org/wiki/Surface-mount_technology>
 
-6. Resim 3.1 <https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf#page=60>
+6. Resim 0.1: <https://commons.wikimedia.org/wiki/File:Arduino-uno-pinout.png>
 
-7. Resim 3.2: <https://doc.riot-os.org/group__boards__atmega328p.html>
+7. Resim 1.1: <https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf#page=72>
 
-8. Resim 3.3: <https://www.reddit.com/r/arduino/comments/gyrdii/atmega328p_tqfp32_pinout/>
+8. Resim 3.1 <https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf#page=60>
+
+9. Resim 3.2: <https://doc.riot-os.org/group__boards__atmega328p.html>
+
+10. Resim 3.3: <https://www.reddit.com/r/arduino/comments/gyrdii/atmega328p_tqfp32_pinout/>
