@@ -27,8 +27,9 @@
       - [DDRx (The Port x Data Direction Register)](#ddrx-the-port-x-data-direction-register)
       - [PORTx (The Port x Data Register)](#portx-the-port-x-data-register)
       - [PINx (The Port x Input Pins Address)](#pinx-the-port-x-input-pins-address)
-    - [Temel Giriş Çıkış İşlemleri](#temel-giriş-çıkış-i̇şlemleri)
+    - [Giriş Çıkış İşlemleri](#giriş-çıkış-i̇şlemleri)
       - [Örnek Kod: Led Yakma](#örnek-kod-led-yakma)
+      - [Pull-up ve Pull-down Dirençleri](#pull-up-ve-pull-down-dirençleri)
   - [Kaynaklar](#kaynaklar)
 
 ## Başlarken
@@ -384,7 +385,7 @@ Arduino UNO Pinout Diyagramı:
 
 * DDRx ile giriş olarak tanımlanan portlardan/pinlerden dığrudan port veya pin okuma yöntemi ile registerden elde edilen değer sonrasında mikrodenetleyicinin hafıza birimlerine kaydedilir ve bu değer üzerinde işlem yapılarak çıkış birimlerine iletilir. Burada verinin okunduktan sorna nasıl kaydedileceği, işleneceği ve çıkış olarak verileceği programcının yazdığı programa bağlıdır.
 
-### Temel Giriş Çıkış İşlemleri
+### Giriş Çıkış İşlemleri
 
 * Portların ayakları Input, Input Pull-Up, Sink, Source ve Tri-State konumlarında olabilir.
 
@@ -433,14 +434,14 @@ Arduino UNO Pinout Diyagramı:
 
 int main(void){
 
-    DDRB = 0xFF; //0b11111111 şeklinde de ifade edilebilir.
+    DDRD = 0xFF; //0b11111111 şeklinde de ifade edilebilir.
 
-    PORTB = OxFF; //0b11111111 şeklinde de ifade edilebilir.
+    PORTD = OxFF; //0b11111111 şeklinde de ifade edilebilir.
     while(1){}
 }
 ```
 
-* Yukarıdaki kod Arduino UNO kartının 0,1, 2, 3, 4, 5, 6 ve 7 numaralı pinlerine bağlı ledleri yakar. Kodların açıklaması aşağıda yapılmaktadır. 
+* Yukarıdaki kod Arduino UNO kartının 0,1, 2, 3, 4, 5, 6 ve 7 numaralı pinlerine bağlı ledleri yakar. Koda ait devre şemasına ve simülasyona [tinkercad](https://www.tinkercad.com/things/0lISAFppEBF) üzerinden erişebilirsiniz. Kodların açıklaması aşağıda yapılmaktadır. 
 
 * `#include <avr/io.h>` : Bu komut ile avr input/output kütüphanesini kodumuza ekliyoruz.
 
@@ -451,6 +452,14 @@ int main(void){
 * `PORTB = 0xFF` : PORTB yazmacındaki tüm bitlerere 1 değeri verilerek bu portun hepsinden 5 volt çıkış sağlanmıştır.
   
 * `while(1){}` : Main fonksiyonu bir defa çalıştırıldığından main fonksiyonu içerisine direkt yazılan kodlar başlangıçta bir kere işletilecektir. Ancak mikrokontrolcü kullanımında bir işlevin birden fazla yapılması istenebilmektedir. Bu yüzden main fonksiyonu içerisine yazılan ve sürekli çalışan bir while döngüsü tanımlanarak süreklilik sağlanır.
+
+#### Pull-up ve Pull-down Dirençleri
+
+* Elektronik mantık devrelerinde bir pull-up ya da pull down direnci gelecek sinyalin parazitini önlemek amacıyla kullanılır. 
+
+* Genellikle button, switch, sensör gibi komponentlerin daha düzgün çalışması için kullanılırlar. 
+
+
 ## Kaynaklar
 
 1. <https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf>
@@ -463,12 +472,14 @@ int main(void){
 
 5. <https://en.wikipedia.org/wiki/Surface-mount_technology>
 
-6. Resim 0.1: <https://commons.wikimedia.org/wiki/File:Arduino-uno-pinout.png>
+6. <https://en.wikipedia.org/wiki/Pull-up_resistor>
 
-7. Resim 1.1: <https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf#page=72>
+7. Resim 0.1: <https://commons.wikimedia.org/wiki/File:Arduino-uno-pinout.png>
 
-8. Resim 3.1 <https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf#page=60>
+8. Resim 1.1: <https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf#page=72>
 
-9. Resim 3.2: <https://doc.riot-os.org/group__boards__atmega328p.html>
+9.  Resim 3.1 <https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf#page=60>
 
-10. Resim 3.3: <https://www.reddit.com/r/arduino/comments/gyrdii/atmega328p_tqfp32_pinout/>
+10. Resim 3.2: <https://doc.riot-os.org/group__boards__atmega328p.html>
+
+11. Resim 3.3: <https://www.reddit.com/r/arduino/comments/gyrdii/atmega328p_tqfp32_pinout/>
