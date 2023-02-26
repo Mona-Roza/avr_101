@@ -551,7 +551,7 @@ int main(){
 
         ```c
         DDRD = 0xFF;
-        
+
         // veya 
 
         DDRB = 0b00000000;
@@ -564,6 +564,49 @@ int main(){
         ```
 
 2. Bitwise Operatörler İle Port Denetimi:
+
+    * Port yazmaçlarına bağlı bacaklar tek tek manipüle edilmek istendiğinde bitwise operatörler ile manipülasyon yapılmalıdır. 
+
+| Operatör | Operatörün İşlevi|
+|---|---|
+| & | Bitwise AND |
+| \| | Bitwise OR |
+| ^ | Bitwise XOR |
+| ~ | Bitwise Tersleyen ((r-1)'e göre ters alır)|
+| << | Bitwise Sola Kaydırma |
+| >> | Bitwise Sağa Kaydırma |
+| \|= | OR Eşittir |
+| &= | AND Eşittir |
+| ^= | XOR Eşittir |
+| ~= | Tersleyen Eşittir ((r-1)'e göre ters alır ve atama yapar.)|
+
+* Yukarıdaki tabloda bitwise operatörler gösterilmiştir. 
+
+:warning: Bu operatörler, c dilindeki diğer operatörler ile karıştırılmamalıdır. Bitwise operatörler bit düzeyinde işlem yapmak için kullanılırlar.
+
+* Temel kullanımlara örnekler aşağıda verilmiştir.
+
+```c
+DDRD |= 0xFF;
+// DDRD registerinin bitleri 1 ile veyalanarak atama yapıldı.
+
+PORTD |= 0xFF;
+// PORTD registerinin bitleri 1 ile veyalanarak atama yapıldı.
+
+PORTD &= 0x00;
+// PORTD registerinin bitleri 0 ile ve'lenerek atama yapıldı. Eğer veya kullanılsaydı değerler 0 yapılamazdı.
+
+PORTD |= (1 << PORTD0);
+// PORTD registerinin 0. biti 1 yapıldı.
+
+PORTD |= (1 << 0);
+// PORTD registerinin 0. biti 1 yapıldı.
+
+PORTD ^= 0xE2;
+// PORTD registerinin değerleri E2 on altılık sayısı ile xorlanarak atama yapıldı.
+
+
+```
 
 ## Kaynaklar
 
