@@ -30,6 +30,7 @@
     - [Giriş Çıkış İşlemleri](#giriş-çıkış-i̇şlemleri)
       - [Örnek Kod: Led Yakma](#örnek-kod-led-yakma)
       - [Pull-up ve Pull-down Dirençleri](#pull-up-ve-pull-down-dirençleri)
+      - [Port Üzderinden I/O ve Delay](#port-üzderinden-io-ve-delay)
   - [Kaynaklar](#kaynaklar)
 
 ## Başlarken
@@ -399,6 +400,8 @@ Arduino UNO Pinout Diyagramı:
 
   * Tri-state: Ne mantıksal HIGH ne de mantıksal LOW demektir. Hükmü olmayan bir durumu temsil eder.
 
+:warning: Tri-state durumu, dijital devrelerde mantık kararsızlığı ya da lojik kararsızlık olarak adlandırılır. Bir ayak boşta olduğunda tri-state durumu oluşur.
+
 <img src="images/port_pin_config.png" alt="" width="800" height="150">
 
 [Resim 3.1](https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf#page=60)
@@ -457,8 +460,17 @@ int main(void){
 
 * Elektronik mantık devrelerinde bir pull-up ya da pull down direnci gelecek sinyalin parazitini önlemek amacıyla kullanılır. 
 
-* Genellikle button, switch, sensör gibi komponentlerin daha düzgün çalışması için kullanılırlar. 
+* Genellikle button, switch, sensör gibi komponentlerin daha düzgün çalışması için kullanılırlar.
 
+Aşağıda Pull-up ve Pull-down dirençlerininin nasıl bağlanacağı devre şeması ile anlatılmaktadır.
+
+| <img src="images/Pull-up-and-Pull-down-Resistor.png" alt= "dip-kılıf" width="400" height="300"> | 
+|---|
+| [Resim 5.1](https://circuitdigest.com/tutorial/pull-up-and-pull-down-resistor) |
+
+#### Port Üzderinden I/O ve Delay 
+
+* Lojik kararsızlığın önlenmesi için ayağı boşta bırakmak yerine bir direnç ile beslemeye ya da şaseye bağlanıp HIGH veya LOW yapmak gerekir. Böylelikle ayağın sabit değeri belirlenmiş olur ve farklı değerler, bu değere göre saptanabilir hale gelir.
 
 ## Kaynaklar
 
