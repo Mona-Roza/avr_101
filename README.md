@@ -451,9 +451,9 @@ int main(void){
 
 * `int main(void){}` : Main fonksiyonu c dilinde ana program fonksiyonudur. Yazılan kodların main fonksiyonu içerisinde bulunmaması ya da çağrılmaması durumunda programda bir etki yaratmaz. Bu fonksiyon içindeki komutlar aşağıdan yukarıya, aksi belirtilmedikçe, bir defa yürütülür. 
 
-* `DDRB = 0xFF;` : DDRB registerinin değerini 0xFF yani 8 bitinin de 1 yapılmasını sağlayan ifadedir. Bu kod satırı kullanılarak Data Direct Registerinin B kısmının 8 bitinin de çıkış olduğu belirtilmiştir.
+* `DDRB = 0xFF;` : DDRB registerinin değerini 0xFF yani 8 bitinin de 1 yapılmasını sağlayan ifadedir. Bu kod satırı kullanılarak Data Direct Registerinin B kısmının 8 bitinin de çıkış olduğu belirtilmiştir. Burada, değerlerin 1 yapılması 16'lık tabanda belirtilmiştir. Ancak bu değerler 2'lik taban kullanılarak da değiştirilebilir.
 
-* `PORTB = 0xFF` : PORTB yazmacındaki tüm bitlerere 1 değeri verilerek bu portun hepsinden 5 volt çıkış sağlanmıştır.
+* `PORTB = 0xFF` : PORTB yazmacındaki tüm bitlerere 1 değeri verilerek bu portun hepsinden 5 volt çıkış sağlanmıştır. Burada, değerlerin 1 yapılması 16'lık tabanda belirtilmiştir. Ancak bu değerler 2'lik taban kullanılarak da değiştirilebilir.
   
 * `while(1){}` : Main fonksiyonu bir defa çalıştırıldığından main fonksiyonu içerisine direkt yazılan kodlar başlangıçta bir kere işletilecektir. Ancak mikrokontrolcü kullanımında bir işlevin birden fazla yapılması istenebilmektedir. Bu yüzden main fonksiyonu içerisine yazılan ve sürekli çalışan bir while döngüsü tanımlanarak süreklilik sağlanır.
 
@@ -554,3 +554,5 @@ int main(){
 10. Resim 3.2: <https://doc.riot-os.org/group__boards__atmega328p.html>
 
 11. Resim 3.3: <https://www.reddit.com/r/arduino/comments/gyrdii/atmega328p_tqfp32_pinout/>
+
+12. Resim 5.1: <https://circuitdigest.com/tutorial/pull-up-and-pull-down-resistor>
