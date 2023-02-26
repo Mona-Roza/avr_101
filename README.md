@@ -512,7 +512,8 @@ int main(void){
         için ifndef önişlemci komutu ile eğer tanımlanmamışsa 
         tanımlama yaptığımızı belirttik. 
         Bu değer kullandığımız mikrodenetleyicinin saat frekansıdır.
-        Frekans sayısının sonunda belirtilen UL ise sayının unsigned long olduğunu belirtir.
+        Frekans sayısının sonunda belirtilen UL ise sayının unsigned 
+        long olduğunu belirtir.
     */
 #endif
 
