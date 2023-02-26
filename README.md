@@ -524,8 +524,8 @@ int main(){
 
         _delay_ms(1000); 
         /*
-        1 saniye bekleme süresi için fonksiyon 
-        çağırılırken 1000 milisaniye biçiminde parametre gönderilmiştir.
+        1 saniye bekleme süresi için fonksiyon çağırılırken 
+        1000 milisaniye biçiminde parametre gönderilmiştir.
         */
 
         PORTB = 0x00;
