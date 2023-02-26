@@ -28,6 +28,7 @@
       - [PORTx (The Port x Data Register)](#portx-the-port-x-data-register)
       - [PINx (The Port x Input Pins Address)](#pinx-the-port-x-input-pins-address)
     - [Temel Giriş Çıkış İşlemleri](#temel-giriş-çıkış-i̇şlemleri)
+      - [Örnek Kod: Led Yakma](#örnek-kod-led-yakma)
   - [Kaynaklar](#kaynaklar)
 
 ## Başlarken
@@ -417,8 +418,6 @@ Arduino UNO Pinout Diyagramı:
 
 * Yukarıdaki [pinout](https://en.wikipedia.org/wiki/Pinout) diyagramlarından görüleceği gibi mikrokontrolcünün ayakları port, iletişim, analog veya kesme gibi farklı amaçlar için kullanılabilir durumdadır.
 
-:warning: Bu başlık altında mikrodenetleyici ayaklarının port olarak kullanılması incelenecektir.
-
 * Atmega328p mikrodenetleyicisinin güç ayakları dışındaki tüm ayakları portlardan oluşur. Bu portlar **PORTB**, **PORTC** ve **PORTD** olmak üzere üç adettir.
 
 * PORTD 8 ayaktan oluşurken PORTB ve PORTC mikrokontrolcüdeki kısıtlı ayak sayısı dolayısıyla 8 ayağa sahip değildir. Gelişmiş uygulamalarda bu portların yetersiz gelmesi muhtemeldir.
@@ -427,6 +426,31 @@ Arduino UNO Pinout Diyagramı:
 
 * x portunun n'inci ayağı Pxn yada PORTxn biçiminde ifade edilir.
 
+#### Örnek Kod: Led Yakma
+
+```c
+#include <avr/io.h>
+
+int main(void){
+
+    DDRB = 0xFF; //0b11111111 şeklinde de ifade edilebilir.
+
+    PORTB = OxFF; //0b11111111 şeklinde de ifade edilebilir.
+    while(1){}
+}
+```
+
+* Yukarıdaki kod Arduino UNO kartının 0,1, 2, 3, 4, 5, 6 ve 7 numaralı pinlerine bağlı ledleri yakar. Kodların açıklaması aşağıda yapılmaktadır. 
+
+* `#include <avr/io.h>` : Bu komut ile avr input/output kütüphanesini kodumuza ekliyoruz.
+
+* `int main(void){}` : Main fonksiyonu c dilinde ana program fonksiyonudur. Yazılan kodların main fonksiyonu içerisinde bulunmaması ya da çağrılmaması durumunda programda bir etki yaratmaz. Bu fonksiyon içindeki komutlar aşağıdan yukarıya, aksi belirtilmedikçe, bir defa yürütülür. 
+
+* `DDRB = 0xFF;` : DDRB registerinin değerini 0xFF yani 8 bitinin de 1 yapılmasını sağlayan ifadedir. Bu kod satırı kullanılarak Data Direct Registerinin B kısmının 8 bitinin de çıkış olduğu belirtilmiştir.
+
+* `PORTB = 0xFF` : PORTB yazmacındaki tüm bitlerere 1 değeri verilerek bu portun hepsinden 5 volt çıkış sağlanmıştır.
+  
+* `while(1){}` : Main fonksiyonu bir defa çalıştırıldığından main fonksiyonu içerisine direkt yazılan kodlar başlangıçta bir kere işletilecektir. Ancak mikrokontrolcü kullanımında bir işlevin birden fazla yapılması istenebilmektedir. Bu yüzden main fonksiyonu içerisine yazılan ve sürekli çalışan bir while döngüsü tanımlanarak süreklilik sağlanır.
 ## Kaynaklar
 
 1. <https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf>
