@@ -32,6 +32,7 @@
       - [Pull-up ve Pull-down Dirençleri](#pull-up-ve-pull-down-dirençleri)
       - [Port Üzderinden I/O](#port-üzderinden-io)
       - [Delay Kütüphanesi İle Bekleme](#delay-kütüphanesi-i̇le-bekleme)
+      - [Bit Tabanlı Giriş ve Çıkış](#bit-tabanlı-giriş-ve-çıkış)
   - [Kaynaklar](#kaynaklar)
 
 ## Başlarken
@@ -498,7 +499,7 @@ int main(void){
 
 * Duraklatma ya da bekleme işlemi sadece işlemleri bekletmek için değil, işlemlerin daha doğru bir biçimde yapılması için de kullanılmaktadır. 
 
-* Aşağıda bekleme için örnek bir kod vardır. Bu kodu [tinkercad](https://www.tinkercad.com/things/bEHKJpCJwEr) üzerinden simüle edebilirsiniz.
+* Aşağıda ledi 1 saniye aralıkla yakıp söndüren bir kod örneği verilmiştir. Bu kodu [tinkercad](https://www.tinkercad.com/things/bEHKJpCJwEr) üzerinden simüle edebilirsiniz.
 
 ```c
 #include <avr/io.h>
@@ -535,6 +536,34 @@ int main(){
     }
 }
 ```
+
+#### Bit Tabanlı Giriş ve Çıkış
+
+* Portlar manipüle edilirken her zaman porta değer atayarak işlem yapmak efektif olmaz. Bu nedenle bitwise operatörler yardımıyla portlara ait bacakların değerleri tek tek ya da bütünüyle değiştirilebilir. aşağıda bu işlemlerin nasıl yapılacağı örneklerle anlatılacaktır.
+
+1. Değer Atama Yoluyla Port Denetimi:
+
+    *  `=` operatörü ile port yazmacına istediğimiz sabit bir değeri veya değişkeni atayabiliriz.
+
+    * Değer atama yöntemiyle port manipülasyonu gerçekleştiğinde 8 bitlik portun bütün değerleri atanan değer ya da değişkene göre güncellenecektir. Yani port bacakları tek tek değil bütün bir halde değerlendirilecektir.
+
+    * Temel yazımı aşağıdaki gibidir.
+
+        ```c
+        DDRD = 0xFF;
+        
+        // veya 
+
+        DDRB = 0b00000000;
+
+        //PIN veya PORT yazmacı ile de aynı biçimde kullanılabilir.
+
+        PORTD = 0xFF;
+
+        PINB = 0x00;
+        ```
+
+2. Bitwise Operatörler İle Port Denetimi:
 
 ## Kaynaklar
 
