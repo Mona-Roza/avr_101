@@ -30,7 +30,8 @@
     - [Giriş Çıkış İşlemleri](#giriş-çıkış-i̇şlemleri)
       - [Örnek Kod: Led Yakma](#örnek-kod-led-yakma)
       - [Pull-up ve Pull-down Dirençleri](#pull-up-ve-pull-down-dirençleri)
-      - [Port Üzderinden I/O ve Delay](#port-üzderinden-io-ve-delay)
+      - [Port Üzderinden I/O](#port-üzderinden-io)
+      - [Delay Kütüphanesi İle Bekleme](#delay-kütüphanesi-i̇le-bekleme)
   - [Kaynaklar](#kaynaklar)
 
 ## Başlarken
@@ -468,9 +469,67 @@ Aşağıda Pull-up ve Pull-down dirençlerininin nasıl bağlanacağı devre şe
 |---|
 | [Resim 5.1](https://circuitdigest.com/tutorial/pull-up-and-pull-down-resistor) |
 
-#### Port Üzderinden I/O ve Delay 
+* Pull-Up direnci ile bağlanan komponentten alınan sinyal sürekli 1 olur ve durum değiştirme halinde 0 sağlanır.
 
-* Lojik kararsızlığın önlenmesi için ayağı boşta bırakmak yerine bir direnç ile beslemeye ya da şaseye bağlanıp HIGH veya LOW yapmak gerekir. Böylelikle ayağın sabit değeri belirlenmiş olur ve farklı değerler, bu değere göre saptanabilir hale gelir.
+* Pull-Down direnci ile bağlanan komponentten alınan sinyal sürekli 0 olur ve durum değiştirme halinde 1 sağlanır.
+
+#### Port Üzderinden I/O
+
+* Lojik kararsızlığın önlenmesi için ayağı boşta bırakmak yerine bir direnç ile beslemeye ya da şaseye bağlanıp HIGH veya LOW yapmak gerekir. Böylelikle ayağın sabit değeri belirlenmiş olur ve farklı değerler, bu değere göre saptanabilir hale gelir. Aşağıda bir örnek ile input ve output alma işlemi yaparak bu durumu daha iyi anlayalım:
+
+```c
+#include <avr/io.h>
+
+int main(void){
+
+    DDRD = 0x00; //D portunun tüm ayakları giriş olarak tanımlandı
+    DDRB = 0xFF; //B portunun tüm ayakları çıkış olarak tanımlandı
+    while(1){
+     	PORTB = PIND; 
+        /* PORTB yazmacının değerini doğrudan PIND yazmacının değerine eşitleyerek PIND yazmacında bir değişiklik olduğunda bu değişikliğin PORTB yazmacına yansıtılması sağlandı. */
+    }
+}
+```
+[Tinkercad](https://www.tinkercad.com/things/222POra4Lz6) üzerinden simüle edebilirsiniz. 
+
+#### Delay Kütüphanesi İle Bekleme
+
+* Bir işlem için bekleme yapılması istendiğinde util/delay.h kütüphanesi içerisinden _delay_ms(int) fonksiyonu veya türevleri kullanılabilir. 
+
+* Duraklatma ya da bekleme işlemi sadece işlemleri bekletmek için değil, işlemlerin daha doğru bir biçimde yapılması için de kullanılmaktadır. 
+
+* Aşağıda bekleme için örnek bir kod vardır. Bu kodu [tinkercad](https://www.tinkercad.com/things/bEHKJpCJwEr) üzerinden simüle edebilirsiniz.
+
+```c
+#include <avr/io.h>
+#include <util/delay.h>
+
+#ifndef F_CPU
+    #define F_CPU 16000000UL
+    /* 
+        F_CPU değeri delay kütüphanesinin kullanacağı bir değerdir. Kütüphanelerin içerisinde bulunup bulunmadığını bilmediğimiz için ifndef önişlemci komutu ile eğer tanımlanmamışsa tanımlama yaptığımızı belirttik. 
+        Bu değer kullandığımız mikrodenetleyicinin saat frekansıdır.
+        Frekans sayısının sonunda belirtilen UL ise sayının unsigned long olduğunu belirtir.
+    */
+#endif
+
+int main(){
+    DDRB = 0xFF;
+
+    while(1){
+        PORTB = 0xFF;
+
+        _delay_ms(1000); 
+        /*
+        1 saniye bekleme süresi için fonksiyon çağırılırken 1000 milisaniye biçiminde parametre gönderilmiştir.
+        */
+
+        PORTB = 0x00;
+
+        _delay_ms(1000);
+    }
+}
+```
 
 ## Kaynaklar
 
