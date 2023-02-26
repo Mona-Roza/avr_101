@@ -508,7 +508,9 @@ int main(void){
     #define F_CPU 16000000UL
     /* 
         F_CPU değeri delay kütüphanesinin kullanacağı bir değerdir. 
-        Kütüphanelerin içerisinde bulunup bulunmadığını bilmediğimiz için ifndef önişlemci komutu ile eğer tanımlanmamışsa tanımlama yaptığımızı belirttik. 
+        Kütüphanelerin içerisinde bulunup bulunmadığını bilmediğimiz 
+        için ifndef önişlemci komutu ile eğer 
+        tanımlanmamışsa tanımlama yaptığımızı belirttik. 
         Bu değer kullandığımız mikrodenetleyicinin saat frekansıdır.
         Frekans sayısının sonunda belirtilen UL ise sayının unsigned long olduğunu belirtir.
     */
@@ -522,7 +524,8 @@ int main(){
 
         _delay_ms(1000); 
         /*
-        1 saniye bekleme süresi için fonksiyon çağırılırken 1000 milisaniye biçiminde parametre gönderilmiştir.
+        1 saniye bekleme süresi için fonksiyon 
+        çağırılırken 1000 milisaniye biçiminde parametre gönderilmiştir.
         */
 
         PORTB = 0x00;
