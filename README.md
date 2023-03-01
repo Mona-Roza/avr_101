@@ -211,7 +211,7 @@ Sırasıyla aşağıdaki işlemler takip edilmelidir.
 
 ##### avr-gcc'nin Kurulumu
 
-1. Zip dosyasını **[indirin.](https://git-scm.com/download/win)**
+1. Zip dosyasını **[indirin.](https://objects.githubusercontent.com/github-production-release-asset-2e65be/470786236/ad9a7580-e32a-477a-98f7-ccc953847166?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230226%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230226T154344Z&X-Amz-Expires=300&X-Amz-Signature=93a8fbe76dfe8fe3d1aff756a0f13f6ce312e72a5b0e9fec8b8663a8c3cd6086&X-Amz-SignedHeaders=host&actor_id=79102024&key_id=0&repo_id=470786236&response-content-disposition=attachment%3B%20filename%3Davr-gcc-12.1.0-x64-windows.zip&response-content-type=application%2Foctet-stream)**
 
 2. Zip dosyasını kaydedeceğiniz konuma ayıklayın.
 
